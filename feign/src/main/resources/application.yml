@@ -1,0 +1,29 @@
+spring:
+  application:
+    #当前应用名称
+    name: feign
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+eureka:
+  client:
+    serviceUrl:
+      #注册中心的地址
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  #当前服务端口号
+  port: 8760
+
+feign:
+  hystrix:
+    enabled:true
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    feign:    #自定义的 路由名称
+      path: /zuul/**   #路由路径
+      serviceId: feign #VIP 模式中的 serviceId
