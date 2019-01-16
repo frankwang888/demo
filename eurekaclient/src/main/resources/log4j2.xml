@@ -17,7 +17,7 @@
     </Appenders>
     <Loggers>
         <!--根记录，调试模式，线上模式更改为INFO-->
-        <Root level="INFO">
+        <Root level="DEBUG">
             <AppenderRef ref="Console" />
             <!-- AppenderRef 可以控制文件输出对象-->
             <AppenderRef ref="File" />

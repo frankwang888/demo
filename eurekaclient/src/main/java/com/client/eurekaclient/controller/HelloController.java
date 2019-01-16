@@ -27,7 +27,7 @@ public class HelloController {
     public String hello() {
         long i = sysJobService.countByExample(null);
         System.out.println(i);
-        logger.info("日志");
+        logger.info("日志:i="+i);
         return "hello2";
     }
 

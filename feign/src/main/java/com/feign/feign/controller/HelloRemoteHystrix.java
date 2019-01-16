@@ -13,7 +13,8 @@ public class HelloRemoteHystrix implements Feign{
 
     @Override
     public String hello() {
-        return "hello, this messge send failed ";
+        return "failed";
+        //return  "hello, this messge send failed ";
     }
 
 }
